@@ -7,22 +7,22 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <%= @post.content.html_safe %>
 </p>
 
 <p>
   <strong>T:</strong>
-  <%= @post.t %>
+  <%= @post.t.html_safe %>
 </p>
 
 <p>
   <strong>Photo:</strong>
-  <%= @post.photo %>
+  <img src = "<%= @post.photo %>">
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%= @post.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
